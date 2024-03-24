@@ -36,5 +36,14 @@ public class Main {
         System.out.println("-".repeat(30));
         newPersonDays.forEach(System.out::println);
 
+
+        Set<WeekDay> anotherWay = EnumSet.copyOf(allDaysSet);
+        anotherWay.removeAll(annsDaysSet);
+        System.out.println("-".repeat(30));
+        anotherWay.forEach(System.out::println);
+
+
+        System.out.println("-".repeat(30));
+        Set<WeekDay> businessDays = EnumSet.range(WeekDay.MONDAY, WeekDay.FRIDAY);
     }
 }
